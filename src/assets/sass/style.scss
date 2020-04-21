@@ -69,9 +69,64 @@ ul li{
     }
 }
 
+.play{
+    display: flex;
+    align-items: center;
+}
+ 
+.play-video{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    background-image: linear-gradient( 130deg, rgb(103,107,194) 0%, rgb(184,173,254) 100%);
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 78px;
+        height: 78px;
+
+        border: 5px solid $chetwodeBlue;
+        border-radius: 50%;
+        opacity: 0.2;
+
+        transition: opacity .2s linear;
+    }
+
+
+    &:hover{
+        &:before{
+            opacity: 1;
+        }
+    }
+}
+
+.play-text{
+    max-width: 255px;
+    margin-left: 20px;
+
+    color: $bunker;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+        
+    span{
+        font-weight: 700;
+        color: $chetwodeBlue;
+    }
+}
+
+
 
 .container{
-    @include min-max(320px, 1200px, 15px);
+    @include min-max(320px, 1210px, 15px);
 }
 
 
@@ -84,3 +139,5 @@ ul li{
 
 /* Blocks */
 @import "./blocks/header";
+@import "./blocks/transfers";
+@import "./blocks/advantages";

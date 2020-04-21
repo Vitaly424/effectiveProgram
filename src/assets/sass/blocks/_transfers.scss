@@ -1,0 +1,49 @@
+.transfers{
+    position: relative;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    background-image: linear-gradient(-40deg, #b8adfe 0%, #676bc2 100%);
+}
+
+.transfers__list-item{
+    position: relative;
+
+    padding-left: 35px;
+
+    color: $white;
+    font-size: 22px;
+    font-weight: 500;
+
+    &:before{
+        content: "";
+
+        position: absolute;
+        left: 0;
+
+        top: 50%;
+        transform: translateY(-50%);
+        
+        border-radius: 50%;
+
+        width: 20px;
+        height: 20px;
+
+        background-color: $white;
+    }
+}
+
+.transfers__img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    img{
+        display: block;
+    }
+}
+
+.transfers__list{
+    margin-left: 70px;
+}
