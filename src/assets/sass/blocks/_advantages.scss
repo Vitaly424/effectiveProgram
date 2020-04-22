@@ -1,3 +1,7 @@
+.advantages__container{
+    max-width: 1230px;
+}
+
 .advantages__tabs{
     margin-top: 20px;
 
@@ -38,7 +42,8 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 31px;    
+    grid-row-gap: 15px;
+    grid-column-gap: 31px;    
 
     // display: flex;
     // flex-wrap: wrap;

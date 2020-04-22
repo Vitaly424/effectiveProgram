@@ -123,6 +123,14 @@ ul li{
     }
 }
 
+.title{
+    margin-top: 100px;
+
+    color: $deepCove;
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
 
 
 .container{
@@ -141,3 +149,4 @@ ul li{
 @import "./blocks/header";
 @import "./blocks/transfers";
 @import "./blocks/advantages";
+@import "./blocks/specifications";
