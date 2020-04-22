@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__top-right{
@@ -63,6 +64,7 @@
 .footer__bottom{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     color: $deepCove;
     font-family: Montserrat;
@@ -72,10 +74,70 @@
 }
 
 .footer__bottom-left{
-    flex-basis: 411px;
+    flex-basis: 43%;
 }
 
 .footer__bottom-right{
-    flex-basis: 411px;
+    flex-basis: 43%;
     text-align: right;
+}
+
+@media(max-width: 1152px){
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer__top-logos{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer__top-right{
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap :wrap;
+    }
+    .footer__nav{
+        margin-top: 10px;
+
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    .footer__nav-list{
+        justify-content: center;
+    }
+
+    .footer__right-info{
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        flex-basis: 100%;
+    }
+    
+    .footer__btn-consultation{
+        display: block;
+        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 795px){
+    .footer__bottom-left{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer__bottom-right{
+        margin-top: 15px;
+
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer__nav-list{
+        flex-wrap: wrap;
+    }
+    .footer__nav-item{
+        flex-basis: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
 }

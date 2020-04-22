@@ -80,7 +80,9 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
+    flex-shrink: 0;
+    
     width: 60px;
     height: 60px;
 
@@ -132,17 +134,37 @@ ul li{
     text-transform: uppercase;
 }
 
+@media (max-width: 970px){
+    .title {
+        margin-top: 35px;
+        font-size: 36px;
+    }  
+}
+
+@media (max-width: 418px){
+    .title{
+        font-size: 25px;
+    }
+    .play-text{
+        font-size: 18px;
+    }
+}
 
 .container{
     @include min-max(320px, 1210px, 15px);
 }
 
 
+ 
+
 /* Bootstrap */
 // @import "../../../node_modules/bootstrap/scss/functions";
 // @import "../../../node_modules/bootstrap/scss/variables";
 // @import "../../../node_modules/bootstrap/scss/mixins";
 // @import "../../../node_modules/bootstrap/scss/grid";
+
+// slicl
+@import "./blocks/slick";
 
 
 /* Blocks */
@@ -156,3 +178,4 @@ ul li{
 @import "./blocks/questions";
 @import "./blocks/find";
 @import "./blocks/footer";
+ 

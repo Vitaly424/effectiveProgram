@@ -6,11 +6,13 @@
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .find__item{
     position: relative;
     border-radius: 10px;
+    
     flex-basis: 32%;
 
     padding: 20px 20px;
@@ -110,3 +112,39 @@
 
     transform: translate(-50%, -50%);
 }
+
+
+@media (max-width: 1218px){
+    .find__item-center div{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1218px){
+    .find__row{
+        margin-top: 20px;
+    }
+    .find__item.center{
+        &:before{
+            display: none;
+        }
+        &:after{
+            display: none;
+        }
+    }
+    .find__row{
+        margin-bottom: 10px;
+    }
+}
+
+ @media(max-width: 733px){
+    .find__item{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+    .find__item-center div{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+ 
+ }

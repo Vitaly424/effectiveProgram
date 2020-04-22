@@ -14,8 +14,6 @@
     margin-top: 100px;
 }
 .reviews__item {
-    margin-left: auto;
-    margin-right: auto;
     width: 72.407%;
     padding: 20px;
     
@@ -26,6 +24,7 @@
 }
 .reviews__item-content {
     display: flex;
+    
 
     padding: 30px 20px;
     width: 100%;
@@ -54,5 +53,131 @@
         &:last-child{
             margin-bottom: 0;
         }
+    }
+}
+
+.reviews__row{
+    position: relative;
+
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews__row .slick-dots{
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__row .slick-dots li{
+    margin-right: 5px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.reviews__row .slick-dots li button{
+    background-color: $yellow;
+    border: none;
+    font-size: 0;
+
+    width: 10px;
+    height: 10px;
+
+    border: 3px solid $yellow;
+
+    &:focus{
+        outline: none;
+    }
+    border-radius: 50%;
+}
+
+.reviews__row .slick-dots li.slick-active button{
+    background-color: $black;
+
+
+}
+ 
+
+.reviews-next{
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    background: none;
+    border: none;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.reviews-prev{
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    cursor: pointer;
+
+    background: none;
+    border: none;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+@media (max-width: 1004px){
+    .reviews-nex{
+        display: none !important;
+    }
+    .reviews-prev{
+        display: none !important;
+    }
+    .reviews__row{
+        margin-top: 30px;
+    }
+}
+
+@media (max-widtH: 710px){
+    .reviews__item-avatar{
+        text-align: center;
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .reviews__item-content{
+        flex-wrap: wrap;
+
+        padding: 15px 20px;
+    }
+    .reviews__item-author{
+        flex-basis: 100%;
+    }
+    .reviews__item-name{
+        margin-bottom: 10px;
+    }
+    .reviews__desk{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 471px){
+    .reviews__item{
+        padding: 0;
+    }
+    .reviews__item-content{
+        padding: 11px 15px;
+    }
+    .reviews__desk{
+        font-size: 16px;
     }
 }
