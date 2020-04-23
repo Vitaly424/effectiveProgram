@@ -192,8 +192,9 @@
 
 .header__play{
     position: absolute;
-    right: 0;
-    top: 30px;
+ 
+    right: -296px;
+    top: 279px;
 }
 
 
@@ -204,6 +205,13 @@
 .header__nav-burger{
     display: none;
     cursor: pointer;
+}
+
+@media (max-width: 1820px){
+    .header__play{
+        right: 0;
+        top: 30px;
+    }
 }
 
 @media (max-width: 1151px){

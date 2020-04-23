@@ -126,13 +126,105 @@ ul li{
 }
 
 .title{
+    position: relative;
     margin-top: 100px;
 
     color: $deepCove;
     font-size: 56px;
     font-weight: 900;
     text-transform: uppercase;
+
+    &:before{
+        content: "";
+        position: absolute;
+
+        display: block;
+        width: 3px;
+        height: 52px;
+
+        top: 50%;
+        left: -39px;
+        transform: translateY(-50%);
+
+        background-color: #7f7cc8;
+    }
 }
+ 
+.arrow-bottom{
+    position: absolute;
+    left: -35px;
+    top: -22px;
+}
+
+
+.linear{
+    position: absolute;
+    width: 3px;
+    height: 1900px;
+    top: -525px;
+    left: -24px;
+    background-color: #06133f;
+    background-image: linear-gradient(to top, #ffffff 0%, #000105 100%);
+    opacity: 0.1;
+}
+
+.reviews .linear{
+    top: -35px;
+}
+
+.number-heading{
+    position: absolute;
+    left: -59px;
+    top: 27px;
+    color:  $chetwodeBlue;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.specifications__heading .number-heading{
+    left: -74px;
+}
+
+.advantages__content-item-one .number-heading{
+    top: 112px; 
+    left: -50px;
+
+    &:before{
+        content: "";
+        position: absolute;
+
+        display: block;
+        width: 3px;
+        height: 52px;
+
+        top: 50%;
+        left: 36px;
+        transform: translateY(-50%);
+
+        background-color: #7f7cc8;
+    }
+}
+
+ 
+@media (max-width: 1360px){
+    .linear{
+        display: none;
+    }
+    .number-heading{
+        display: none;
+    }
+    .arrow-bottom{
+        display:none;
+    }
+    .title{
+        &:before{
+            display: none;
+        }
+    }
+}
+
 
 @media (max-width: 970px){
     .title {
@@ -151,6 +243,7 @@ ul li{
 }
 
 .container{
+    position: relative;
     @include min-max(320px, 1210px, 15px);
 }
 
