@@ -207,6 +207,10 @@
     cursor: pointer;
 }
 
+
+
+ 
+
 @media (max-width: 1820px){
     .header__play{
         right: 0;
@@ -230,8 +234,19 @@
         left: 0;
         right: 0;
         top: 110%;
+        z-index: 100;
 
         background-color: $black;
+
+        
+    }
+
+
+ 
+
+
+    .header__nav-list.active{
+        display: block;
     }
     .header__nav-item{
         margin-left: 0;

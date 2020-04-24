@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
     $(".reviews__row").slick({
         slidesToShow: 1,
@@ -25,7 +27,6 @@ $(document).ready(function () {
             e.preventDefault();
             $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
         });
-
         $('.header__btn').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
@@ -39,9 +40,33 @@ $(document).ready(function () {
             e.preventDefault();
             $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
         });
+        $('.js-header-btn').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+        $('.js-footer-btn').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
     });
 
     $("#phone").mask("+8 (999) 999-9999");
+
+    var menu = document.querySelector('#js-menu');
+    var burger = document.querySelector('#js-burger');
+
+
+    function showMenu() {
+        menu.classList.toggle('active');
+
+        menu.addEventListener('click', (e) => {
+            if (e.target) {
+                menu.classList.remove('active');
+            }
+        });
+    }
+
+    burger.addEventListener('click', showMenu);
 
 });
 
