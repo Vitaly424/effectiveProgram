@@ -1,21 +1,47 @@
-$(".reviews__row").slick({
-    slidesToShow: 1,
-    arrow: true,
-    nextArrow: '<button type="button" class="slick-next  reviews-next"><img src="./assets/img/arrowSlider/back.png" alt="Стрелка назад"></button>',
-    prevArrow: '<button type="button" class="slick-prev  reviews-prev"><img src="./assets/img/arrowSlider/next.png" alt="Стрелка вперед"></button>',
-    responsive: [
-        {
-            breakpoint: 1004,
-            settings: {
-                arrow: false,
-                dots: true
+$(document).ready(function () {
+    $(".reviews__row").slick({
+        slidesToShow: 1,
+        arrow: true,
+        nextArrow: '<button type="button" class="slick-next  reviews-next"><img src="./assets/img/arrowSlider/back.png" alt="Стрелка назад"></button>',
+        prevArrow: '<button type="button" class="slick-prev  reviews-prev"><img src="./assets/img/arrowSlider/next.png" alt="Стрелка вперед"></button>',
+        responsive: [
+            {
+                breakpoint: 1004,
+                settings: {
+                    arrow: false,
+                    dots: true
+                }
             }
-        }
-    ]
+        ]
+    });
+
+    $('.questions__heading').click(function () {
+        $(this).next().slideToggle();
+        $('.questions__body').not(this).next().slideUp();
+    });
+
+    $(function () {
+        $('.header__nav-list a').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+
+        $('.header__btn').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+        $('.header__nav-list a').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+
+        $('.footer__nav-link').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+    });
+
+    $("#phone").mask("+8 (999) 999-9999");
+
 });
 
-
-$('.questions__heading').click(function () {
-    $(this).next().slideToggle();
-    $('.questions__body').not(this).next().slideUp();
-});
