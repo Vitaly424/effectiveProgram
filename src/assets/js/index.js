@@ -51,6 +51,8 @@ $(document).ready(function () {
     });
 
     $("#phone").mask("+8 (999) 999-9999");
+    $("#phoneTwo").mask("+8 (999) 999-9999");
+
 
     var menu = document.querySelector('#js-menu');
     var burger = document.querySelector('#js-burger');
