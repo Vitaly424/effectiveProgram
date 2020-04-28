@@ -48,10 +48,18 @@ $(document).ready(function () {
             e.preventDefault();
             $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
         });
+        $('.specifications__btn a').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
+        $('.specifications__choose-link').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        });
     });
 
-    $("#phone").mask("+8 (999) 999-9999");
-    $("#phoneTwo").mask("+8 (999) 999-9999");
+    $("#phone").mask("+7 (999) 999-9999");
+    $("#phoneTwo").mask("+7 (999) 999-9999");
 
 
     var menu = document.querySelector('#js-menu');

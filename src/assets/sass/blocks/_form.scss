@@ -78,9 +78,14 @@
     margin-bottom: 20px;
     &:focus{
         outline: none;
+        box-shadow: 0 0 5px $chetwodeBlue;
     }
     &:last-child{
         margin-bottom: 0;
+    }
+    transition: box-shadow .2s linear;
+    &:hover{
+        box-shadow: 0 0 5px $chetwodeBlue;
     }
 }
 
@@ -138,6 +143,14 @@
     padding: 10px;
     right: 17px;
     top: 15px;
+}
+
+.form__input-text{
+    width: 100%;
+    padding: 10px;
+    min-height: 150px;
+
+    resize: none;
 }
 
 @media (max-width: 1135px){
